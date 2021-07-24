@@ -3,10 +3,10 @@ body {
   padding: 0;
   direction: rtl;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
 body a {
+  text-shadow: #be0808;
   text-decoration: none;
   color: black;
   padding-right: 2%;
@@ -21,35 +21,17 @@ body .container {
   height: 100vh;
 }
 
-body .container .container-top {
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+body .container .bar {
+  direction: ltr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
 }
 
-body .container .container-top .header-top {
-  margin-top: 20px;
-  width: 180px;
-}
-
-body .container .container-top .header-top i {
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  padding: 5px;
-  margin-right: 20px;
-}
-
-body .container .container-top .header-top i:hover {
-  background-color: #b1b1b1;
-}
-
-body .container .sidebar {
-  padding-top: 20px;
+body .container .bar .sidebar {
+  position: relative;
+  width: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,54 +39,92 @@ body .container .sidebar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 70px;
-  height: 97vh;
+  height: 100%;
   border-right: 1px solid #d3d2d2;
 }
 
-body .container .sidebar .sidebar1 {
-  margin-top: 20px;
+body .container .bar .sidebar .sidebar1 {
+  top: 7%;
+  position: absolute;
+  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 200px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
-body .container .sidebar .sidebar1 strong {
+body .container .bar .sidebar .sidebar1 strong {
   font-size: 30px;
 }
 
-body .container .sidebar .sidebar2 {
+body .container .bar .sidebar .sidebar2 {
+  position: absolute;
+  top: 47%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 350px;
+  background-color: yellow;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+body .container .bar .sidebar .sidebar2 a {
+  padding-left: 20px;
+}
+
+body .container .bar .sidebar .sidebar3 {
+  top: 90%;
+  position: absolute;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
 
-body .container .sidebar .sidebar2 a {
+body .container .bar .sidebar .sidebar3 a {
   padding-left: 20px;
 }
 
-body .container .sidebar .sidebar3 {
+body .container .main {
+  width: calc(100% - 70px);
+  height: 100%;
+}
+
+body .container .main .topbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 350px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 70px;
 }
 
-body .container .sidebar .sidebar3 a {
-  padding-left: 20px;
+body .container .main .topbar .header-top {
+  margin-top: 20px;
+  width: 180px;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
 }
 
-body .container .slidshow img {
-  background-size: cover;
-  width: 500px;
-  height: 600px;
+body .container .main .topbar .header-top i {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+body .container .main .topbar .header-top i:hover {
+  background-color: #b1b1b1;
+}
+
+body .container .main .container-main .slidshow img {
+  height: 500px;
+  width: 400px;
 }
 /*# sourceMappingURL=style.css.map */

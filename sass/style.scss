@@ -3,8 +3,9 @@ body{
   padding: 0;
   direction: rtl;
   font-family:Arial, Helvetica, sans-serif;
-  overflow: hidden;
+
   a{
+    text-shadow:rgb(190, 8, 8);
     text-decoration: none;
     color: black;
     padding-right: 2%;
@@ -15,66 +16,93 @@ body{
   }
     .container{
       height: 100vh;
-      .container-top{
-        height: 60px;
-        display: flex;
-        justify-content: space-between;
-        .header-top{
-          margin-top: 20px;
-          width: 180px;
-          i{
-            background-color: black;
-            color: white;
-            border-radius: 50%;
-            padding:5px;
-            margin-right: 20px;
-          }
-          i:hover{
-            background-color: rgb(177, 177, 177);
-          }
-        } 
-      }
+      .bar{
+        direction: ltr;
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
         .sidebar{
-          padding-top: 20px;
+          position: relative;
+          width: 70px;
           display: flex;
           flex-direction: column;
-          width: 70px;
-          height: 97vh;
+          height: 100%;
           border-right: 1px solid rgb(211, 210, 210);
           .sidebar1 {
-            margin-top: 20px;
+            top: 7%;
+            position: absolute;
+            background-color:red ;
             display: flex;
-            margin-bottom: 200px;
-            transform: rotate(-90deg);
+            transform: rotate(270deg) ;
+
             strong{
               font-size: 30px;
             }
           }       
           .sidebar2 {
+            position: absolute;
+            top:47%;
             display: flex;
-            margin-bottom: 350px;
-            transform: rotate(-90deg);
+            background-color:yellow ;
+            transform: rotate(270deg) ;
+
             a{
               padding-left: 20px;
             }
           }
           .sidebar3 {
+            top: 90%;
+            position: absolute;
+
+            background-color:green ;
             display: flex;
-            margin-bottom: 350px;
             transform: rotate(-90deg);
+
             a{
-            padding-left: 20px;
+              padding-left: 20px;
             }
           }
-        }
-        .slidshow{
-          img{
-            background-size: cover;
-            width: 500px;
-            height: 600px;
-          }
         }   
-    }    
+      }    
+
+
+
+      .main{
+        width: calc(100% - 70px);
+        height: 100%;
+        .topbar{
+          display: flex;
+          justify-content: space-between;
+          height: 70px;
+          
+          .header-top{
+            margin-top: 20px;
+            width: 180px;
+            flex: 50%;
+            i{
+              background-color: black;
+              color: white;
+              border-radius: 50%;
+              padding:5px;
+              margin-right: 20px;
+            }
+            i:hover{
+              background-color: rgb(177, 177, 177);
+            }
+          } 
+        }
+        .container-main{
+          .slidshow{
+            
+            img{
+              height: 500px;
+              width: 400px;
+            } 
+          }
+        }
+      }
+    }   
 }
   
      
